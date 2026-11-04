@@ -7,10 +7,8 @@ fun main() {
     val single = Single(song1, song2)
     val album = Album(listOf(song3, song4))
 
-    val musicList: List<Music> = listOf(single, album)
+    val recordPlayer = RecordPlayer()
 
-    musicList.forEach { Music ->
-        println("Playing time: ${Music.getPlayingTime()} seconds")
-        println("Songs: ${Music.getAllSongs()}")
-    }
+    recordPlayer.Play(single)
+    recordPlayer.Play(album)
 }
